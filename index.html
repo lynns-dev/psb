@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pretty Serious Brands — Brand, Ecommerce & Growth Partners</title>
-<meta name="description" content="PSB is a small, focused brand development, design and growth agency partnering with ecommerce brands ready to scale.">
+<title>PSB — Pretty Serious Brands</title>
+<meta name="description" content="PSB builds and scales ecommerce brands — ideation, design and growth, run by operators, not theorists.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --black:#0a0a0a;
     --white:#ffffff;
-    --line:#e6e4e0;
+    --line:#e2e0da;
     --grey:#6b6b6b;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -25,140 +25,205 @@
     font-weight:400;
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
   h1,h2,h3{
     font-family:'Fraunces',serif;
     font-weight:600;
-    letter-spacing:-0.01em;
-    line-height:1.05;
+    letter-spacing:-0.02em;
+    line-height:0.98;
+    text-transform:uppercase;
   }
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
-  section{padding:120px 0;}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
+  section{padding:150px 0;}
   @media(max-width:768px){
-    section{padding:72px 0;}
-    .wrap{padding:0 22px;}
+    section{padding:88px 0;}
+    .wrap{padding:0 20px;}
   }
 
   /* NAV */
   header{
     position:fixed;top:0;left:0;right:0;z-index:50;
-    background:rgba(255,255,255,0.92);
-    backdrop-filter:blur(8px);
+    background:rgba(255,255,255,0.94);
+    backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
   nav{
-    max-width:1180px;margin:0 auto;padding:20px 32px;
+    max-width:1240px;margin:0 auto;padding:22px 32px;
     display:flex;align-items:center;justify-content:space-between;
   }
-  .logo{font-family:'Fraunces',serif;font-weight:700;font-size:20px;letter-spacing:0.02em;}
-  .logo span{font-family:'Inter',sans-serif;font-weight:400;font-size:11px;letter-spacing:0.12em;color:var(--grey);display:block;margin-top:2px;text-transform:uppercase;}
-  .navlinks{display:flex;gap:36px;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;}
-  .navlinks a{opacity:0.72;transition:opacity .2s;}
+  .logo{font-family:'Fraunces',serif;font-weight:900;font-size:22px;letter-spacing:0.01em;text-transform:uppercase;}
+  .logo span{font-family:'Inter',sans-serif;font-weight:500;font-size:10px;letter-spacing:0.16em;color:var(--grey);display:block;margin-top:3px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:40px;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;}
+  .navlinks a{position:relative;opacity:0.75;transition:opacity .2s;}
   .navlinks a:hover{opacity:1;}
   .navcta{
-    border:1px solid var(--black);padding:10px 20px;font-size:12px;
-    text-transform:uppercase;letter-spacing:0.08em;transition:background .2s,color .2s;
+    background:var(--black);color:var(--white);padding:12px 22px;font-size:11px;
+    text-transform:uppercase;letter-spacing:0.1em;font-weight:500;transition:opacity .2s;
   }
-  .navcta:hover{background:var(--black);color:var(--white);}
-  @media(max-width:768px){.navlinks{display:none;}}
+  .navcta:hover{opacity:0.75;}
+  @media(max-width:860px){.navlinks{display:none;}}
 
   /* HERO */
-  .hero{padding-top:220px;padding-bottom:100px;}
+  .hero{padding-top:200px;padding-bottom:0;position:relative;}
   .eyebrow{
-    font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--grey);
-    display:flex;align-items:center;gap:12px;margin-bottom:28px;
+    font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey);font-weight:500;
+    display:flex;align-items:center;gap:14px;margin-bottom:36px;
   }
-  .eyebrow::before{content:"";width:34px;height:1px;background:var(--black);display:inline-block;}
+  .eyebrow::before{content:"";width:44px;height:1px;background:var(--black);display:inline-block;}
   .hero h1{
-    font-size:clamp(44px,7vw,92px);
-    max-width:14ch;
+    font-size:clamp(56px,10vw,148px);
+    letter-spacing:-0.03em;
   }
-  .hero h1 em{font-style:italic;font-weight:500;}
-  .hero-sub{
-    margin-top:32px;font-size:19px;max-width:560px;color:#333;font-weight:300;
+  .hero h1 .thin{font-weight:300;font-style:italic;text-transform:none;letter-spacing:-0.01em;}
+  .hero-foot{
+    margin-top:56px;display:flex;justify-content:space-between;align-items:flex-end;
+    border-top:1px solid var(--line);padding-top:36px;flex-wrap:wrap;gap:32px;
   }
-  .hero-row{
-    margin-top:56px;display:flex;gap:64px;flex-wrap:wrap;
-    border-top:1px solid var(--line);padding-top:32px;
+  .hero-sub{font-size:17px;max-width:420px;color:#333;font-weight:300;}
+  .hero-stats{display:flex;gap:56px;flex-wrap:wrap;}
+  .stat b{font-family:'Fraunces',serif;font-size:28px;font-weight:600;display:block;}
+  .stat span{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--grey);}
+  .hero-strip{
+    margin-top:80px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:20px 0;overflow:hidden;white-space:nowrap;
   }
-  .stat b{font-family:'Fraunces',serif;font-size:30px;font-weight:600;display:block;}
-  .stat span{font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:var(--grey);}
+  .hero-strip .track{display:inline-flex;gap:48px;animation:scroll 26s linear infinite;}
+  .hero-strip span{font-family:'Fraunces',serif;font-size:15px;text-transform:uppercase;letter-spacing:0.08em;color:var(--grey);}
+  .hero-strip span b{color:var(--black);font-weight:600;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
   /* SECTION HEADS */
-  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:64px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:32px;}
-  .section-num{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);margin-bottom:14px;}
-  .section-head h2{font-size:clamp(30px,4vw,46px);max-width:16ch;}
-  .section-head p{max-width:380px;font-size:15px;color:var(--grey);font-weight:300;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:72px;flex-wrap:wrap;}
+  .section-num{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--grey);margin-bottom:18px;font-weight:500;}
+  .section-head h2{font-size:clamp(34px,5vw,58px);max-width:14ch;}
+  .section-head p{max-width:340px;font-size:14.5px;color:var(--grey);font-weight:300;}
+
+  /* MANIFESTO */
+  .manifesto{border-top:1px solid var(--line);}
+  .manifesto p{
+    font-family:'Fraunces',serif;font-size:clamp(24px,3.6vw,42px);font-weight:500;
+    line-height:1.28;max-width:18ch;letter-spacing:-0.01em;
+  }
+  .manifesto p em{font-style:italic;font-weight:300;color:var(--grey);}
 
   /* SERVICES */
   .services{border-top:1px solid var(--line);}
   .service{
-    display:grid;grid-template-columns:60px 1fr 1fr;gap:32px;
-    padding:40px 0;border-bottom:1px solid var(--line);align-items:start;
+    display:grid;grid-template-columns:90px 1fr 1fr;gap:32px;
+    padding:44px 0;border-bottom:1px solid var(--line);align-items:start;
+    transition:background .25s;
   }
+  .service:hover{background:#fafaf8;}
   .service:first-child{border-top:1px solid var(--line);}
-  .service-index{font-family:'Fraunces',serif;font-size:14px;color:var(--grey);padding-top:4px;}
-  .service h3{font-size:26px;font-weight:600;}
-  .service p{font-size:15px;color:var(--grey);font-weight:300;max-width:46ch;}
+  .service-index{font-family:'Fraunces',serif;font-size:15px;color:var(--grey);padding-top:6px;}
+  .service h3{font-size:28px;font-weight:600;text-transform:none;letter-spacing:-0.01em;}
+  .service p{font-size:15px;color:var(--grey);font-weight:300;max-width:46ch;text-transform:none;}
   @media(max-width:768px){
     .service{grid-template-columns:1fr;gap:10px;}
   }
 
+  /* GALLERY / PORTFOLIO */
+  .gallery{background:#f5f4f0;}
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:14vw;gap:14px;
+  }
+  .gitem{
+    position:relative;overflow:hidden;background:var(--black);
+    display:flex;align-items:flex-end;padding:20px;
+  }
+  .gitem .g-label{
+    position:relative;z-index:2;color:var(--white);font-size:11px;text-transform:uppercase;
+    letter-spacing:0.12em;font-weight:500;display:flex;flex-direction:column;gap:4px;
+  }
+  .gitem .g-label b{font-family:'Fraunces',serif;font-size:16px;text-transform:none;font-weight:600;letter-spacing:0;}
+  .gitem::before{
+    content:"";position:absolute;inset:0;opacity:0.9;mix-blend-mode:normal;
+  }
+  .gitem::after{
+    content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);
+  }
+  .g1{grid-column:span 3;grid-row:span 2;}
+  .g2{grid-column:span 3;grid-row:span 1;}
+  .g3{grid-column:span 2;grid-row:span 1;}
+  .g4{grid-column:span 2;grid-row:span 2;}
+  .g5{grid-column:span 2;grid-row:span 1;}
+  .g6{grid-column:span 4;grid-row:span 1;}
+  .g7{grid-column:span 3;grid-row:span 1;}
+  .g8{grid-column:span 3;grid-row:span 1;}
+
+  .g1::before{background:linear-gradient(135deg,#3a3a38,#0a0a0a);}
+  .g2::before{background:linear-gradient(135deg,#8b8578,#3a3a38);}
+  .g3::before{background:linear-gradient(135deg,#5b5850,#1a1a18);}
+  .g4::before{background:linear-gradient(135deg,#1a1a18,#4a4640);}
+  .g5::before{background:linear-gradient(135deg,#6e6a5f,#0a0a0a);}
+  .g6::before{background:linear-gradient(135deg,#2a2a28,#7a7568);}
+  .g7::before{background:linear-gradient(135deg,#4a4640,#0a0a0a);}
+  .g8::before{background:linear-gradient(135deg,#0a0a0a,#5b5850);}
+
+  .gallery-note{margin-top:44px;font-size:13px;color:var(--grey);max-width:44ch;font-weight:300;}
+  @media(max-width:900px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:44vw;}
+    .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8{grid-column:span 1;grid-row:span 1;}
+  }
+
   /* FOUNDER */
   .founder{background:var(--black);color:var(--white);}
-  .founder .section-num,.founder .section-head p{color:#aaa;}
-  .founder .section-head{border-color:#2a2a2a;}
-  .founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-  .founder-quote{font-family:'Fraunces',serif;font-size:clamp(24px,3vw,32px);font-weight:500;font-style:italic;line-height:1.35;}
-  .founder-facts{display:flex;flex-direction:column;gap:28px;}
-  .fact{display:flex;justify-content:space-between;border-bottom:1px solid #2a2a2a;padding-bottom:20px;gap:24px;}
+  .founder .section-num{color:#888;}
+  .founder-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:start;}
+  .founder-quote{font-family:'Fraunces',serif;font-size:clamp(26px,3.6vw,38px);font-weight:500;line-height:1.3;text-transform:none;letter-spacing:-0.01em;}
+  .founder-quote em{font-style:italic;font-weight:300;color:#999;}
+  .founder-facts{display:flex;flex-direction:column;gap:0;}
+  .fact{display:flex;justify-content:space-between;border-bottom:1px solid #2a2a2a;padding:22px 0;gap:24px;}
+  .fact:first-child{border-top:1px solid #2a2a2a;}
   .fact b{font-family:'Fraunces',serif;font-size:22px;font-weight:600;white-space:nowrap;}
-  .fact span{font-size:13px;color:#999;text-align:right;max-width:24ch;}
+  .fact span{font-size:12.5px;color:#999;text-align:right;max-width:24ch;font-weight:300;}
   @media(max-width:900px){.founder-grid{grid-template-columns:1fr;gap:48px;}}
 
   /* APPROACH */
   .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  .approach-card{background:var(--white);padding:44px 36px;}
-  .approach-card b{display:block;font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin-bottom:14px;}
-  .approach-card p{font-size:14.5px;color:var(--grey);font-weight:300;}
+  .approach-card{background:var(--white);padding:48px 36px;transition:background .25s;}
+  .approach-card:hover{background:#fafaf8;}
+  .approach-card b{display:block;font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin-bottom:16px;text-transform:none;}
+  .approach-card p{font-size:14.5px;color:var(--grey);font-weight:300;text-transform:none;}
   @media(max-width:900px){.approach-grid{grid-template-columns:1fr;}}
 
   /* CONTACT / FORM */
   .contact{border-top:1px solid var(--line);}
   .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;}
-  .contact-left h2{font-size:clamp(32px,4.5vw,52px);max-width:12ch;margin-bottom:24px;}
-  .contact-left p{font-size:16px;color:var(--grey);font-weight:300;max-width:40ch;margin-bottom:36px;}
+  .contact-left h2{font-size:clamp(36px,5.5vw,64px);max-width:10ch;margin-bottom:28px;}
+  .contact-left p{font-size:16px;color:var(--grey);font-weight:300;max-width:40ch;margin-bottom:40px;text-transform:none;}
   .direct-email{
-    font-family:'Fraunces',serif;font-size:22px;font-weight:600;
+    font-family:'Fraunces',serif;font-size:22px;font-weight:600;text-transform:none;
     border-bottom:1px solid var(--black);padding-bottom:6px;display:inline-block;
   }
-  .direct-note{margin-top:20px;font-size:13px;color:var(--grey);}
+  .direct-note{margin-top:22px;font-size:12.5px;color:var(--grey);}
 
-  form{display:flex;flex-direction:column;gap:22px;}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  form{display:flex;flex-direction:column;gap:24px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
   .field{display:flex;flex-direction:column;gap:8px;}
-  .field label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--grey);}
+  .field label{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--grey);font-weight:500;}
   .field input,.field select,.field textarea{
     border:none;border-bottom:1px solid var(--line);
-    padding:10px 2px;font-family:'Inter',sans-serif;font-size:15px;background:transparent;
+    padding:11px 2px;font-family:'Inter',sans-serif;font-size:15px;background:transparent;
     color:var(--black);
   }
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--black);}
   .field textarea{resize:vertical;min-height:70px;}
   .submit-btn{
-    margin-top:12px;background:var(--black);color:var(--white);border:1px solid var(--black);
-    padding:16px 28px;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;
+    margin-top:14px;background:var(--black);color:var(--white);border:1px solid var(--black);
+    padding:18px 30px;font-size:12px;text-transform:uppercase;letter-spacing:0.14em;font-weight:500;
     cursor:pointer;transition:background .2s,color .2s;width:fit-content;
   }
   .submit-btn:hover{background:var(--white);color:var(--black);}
-  .form-note{font-size:12px;color:var(--grey);margin-top:-6px;}
+  .form-note{font-size:12px;color:var(--grey);margin-top:-8px;}
   @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:56px;}.form-row{grid-template-columns:1fr;}}
 
   footer{border-top:1px solid var(--line);padding:36px 0;}
   .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-  .footer-row span{font-size:12px;color:var(--grey);letter-spacing:0.03em;}
+  .footer-row span{font-size:11px;color:var(--grey);letter-spacing:0.05em;text-transform:uppercase;}
 </style>
 </head>
 <body>
@@ -167,26 +232,39 @@
   <nav>
     <div class="logo">PSB<span>Pretty Serious Brands</span></div>
     <div class="navlinks">
+      <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#founder">Founder</a>
-      <a href="#approach">Approach</a>
     </div>
-    <a class="navcta" href="#contact">Start a conversation</a>
+    <a class="navcta" href="#contact">Start something</a>
   </nav>
 </header>
 
 <main>
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow">Brand · Ecommerce · Growth</div>
-      <h1>Serious brands deserve <em>serious</em> partners.</h1>
-      <p class="hero-sub">PSB is a small, focused agency working alongside ecommerce brands on ideation, design and the growth strategy behind it — built for founders who already know their category, and want a partner who moves like an operator.</p>
-      <div class="hero-row">
-        <div class="stat"><b>15+ yrs</b><span>Ecommerce experience</span></div>
-        <div class="stat"><b>$5M+</b><span>Ad spend managed</span></div>
-        <div class="stat"><b>Multi-channel</b><span>Paid, retention, marketplace</span></div>
-        <div class="stat"><b>By design</b><span>Small team, selective roster</span></div>
+      <div class="eyebrow">Brand — Ecommerce — Growth</div>
+      <h1>Build loud.<br>Sell <span class="thin">quiet.</span></h1>
+      <div class="hero-foot">
+        <p class="hero-sub">PSB is a small agency for brands done playing it safe. We build the identity, the store and the growth engine — then we run it like our own money's in it. Because it is.</p>
+        <div class="hero-stats">
+          <div class="stat"><b>15+ yrs</b><span>In ecommerce</span></div>
+          <div class="stat"><b>$5M+</b><span>Ad spend managed</span></div>
+          <div class="stat"><b>Small</b><span>By design</span></div>
+        </div>
       </div>
+    </div>
+    <div class="hero-strip">
+      <div class="track">
+        <span><b>Brand Ideation</b> — Design — Ecommerce — Growth Strategy — <b>Brand Ideation</b> — Design — Ecommerce — Growth Strategy — </span>
+        <span><b>Brand Ideation</b> — Design — Ecommerce — Growth Strategy — <b>Brand Ideation</b> — Design — Ecommerce — Growth Strategy — </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <div class="wrap">
+      <p>Most agencies sell decks. <em>We've spent seven figures of our own recommendations</em> — and know exactly what breaks even.</p>
     </div>
   </section>
 
@@ -195,31 +273,54 @@
       <div class="section-head">
         <div>
           <div class="section-num">01 — What we do</div>
-          <h2>Four disciplines, one team.</h2>
+          <h2>No fluff. Four disciplines.</h2>
         </div>
-        <p>We work end to end when it's warranted, or drop into one discipline when that's what a brand actually needs.</p>
+        <p>Full build, or drop into the one piece you're missing. Your call.</p>
       </div>
 
       <div class="service">
         <div class="service-index">01</div>
         <h3>Brand Ideation</h3>
-        <p>Positioning, naming, narrative — the thinking that makes a brand defensible before a single asset is designed.</p>
+        <p>Positioning and narrative that make a brand impossible to copy — before a single pixel gets designed.</p>
       </div>
       <div class="service">
         <div class="service-index">02</div>
         <h3>Design</h3>
-        <p>Identity systems, packaging and art direction with a point of view — built to hold up across every channel it touches.</p>
+        <p>Identity, packaging, art direction with an edge. Built to hold up under scale, not just look good in a pitch.</p>
       </div>
       <div class="service">
         <div class="service-index">03</div>
         <h3>Ecommerce Design &amp; Development</h3>
-        <p>Storefronts and product pages designed to convert, built on the platforms you already run — Shopify and beyond.</p>
+        <p>Storefronts built to convert first, look good second — though they'll do both. Shopify and beyond.</p>
       </div>
       <div class="service">
         <div class="service-index">04</div>
         <h3>Growth Strategy &amp; Digital</h3>
-        <p>Paid media, retention and channel strategy grounded in real spend history, not theory.</p>
+        <p>Paid, retention and channel strategy pulled from real spend history — not a template deck.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-num">02 — Selected work</div>
+          <h2>A few of the brands we've built.</h2>
+        </div>
+        <p>Case studies and full galleries available on request — client work under NDA until launch.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gitem g1"><div class="g-label"><b>Brand Identity</b>Full system launch</div></div>
+        <div class="gitem g2"><div class="g-label"><b>Packaging</b>Retail rollout</div></div>
+        <div class="gitem g3"><div class="g-label"><b>Storefront</b>Shopify rebuild</div></div>
+        <div class="gitem g4"><div class="g-label"><b>Campaign</b>Paid social creative</div></div>
+        <div class="gitem g5"><div class="g-label"><b>Art Direction</b>Product photography</div></div>
+        <div class="gitem g6"><div class="g-label"><b>Growth</b>Multi-channel scale-up</div></div>
+        <div class="gitem g7"><div class="g-label"><b>Naming</b>Positioning &amp; voice</div></div>
+        <div class="gitem g8"><div class="g-label"><b>Digital</b>Email &amp; retention</div></div>
+      </div>
+      <p class="gallery-note">Portfolio images load here — swap each <code>.gitem</code> background for real work as case studies go live.</p>
     </div>
   </section>
 
@@ -227,43 +328,43 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="section-num">02 — Who's behind it</div>
-          <h2>Built on operator experience.</h2>
+          <div class="section-num">03 — Who's behind it</div>
+          <h2>Run by an operator, not a strategist.</h2>
         </div>
       </div>
       <div class="founder-grid">
-        <p class="founder-quote">"I've sat on both sides of the table — running spend and running the brand. PSB exists because most agencies do one or the other. We do both, at a scale small enough to stay honest."</p>
+        <p class="founder-quote">"I've run the spend and run the brand — <em>same brand, same P&amp;L.</em> Most agencies pick one side of that table. We built PSB because that split never made sense."</p>
         <div class="founder-facts">
-          <div class="fact"><b>15+ years</b><span>In ecommerce, across brand, design and performance</span></div>
-          <div class="fact"><b>$5M+</b><span>In tracked ad spend across paid social, search and marketplace</span></div>
-          <div class="fact"><b>Multi-channel</b><span>Paid media, email/SMS, marketplace and retail discipline</span></div>
-          <div class="fact"><b>Small by design</b><span>A focused team, not an account-manager pipeline</span></div>
+          <div class="fact"><b>15+ years</b><span>Brand, design and performance in ecommerce</span></div>
+          <div class="fact"><b>$5M+</b><span>Tracked ad spend, paid social to marketplace</span></div>
+          <div class="fact"><b>Multi-channel</b><span>Paid, email/SMS, marketplace, retail</span></div>
+          <div class="fact"><b>Small, on purpose</b><span>A team, not an account pipeline</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="approach" id="approach">
+  <section class="approach">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="section-num">03 — How we work</div>
-          <h2>Fewer clients, more attention.</h2>
+          <div class="section-num">04 — How we work</div>
+          <h2>Fewer brands. More weight behind each one.</h2>
         </div>
-        <p>We partner with a small number of brands at a time — by choice, not capacity.</p>
+        <p>We take on a small number of partners at a time. That's the whole model.</p>
       </div>
       <div class="approach-grid">
         <div class="approach-card">
-          <b>Selective roster</b>
-          <p>We take on brands we can meaningfully move, not fill a pipeline. If it's not a fit, we'll say so.</p>
+          <b>Selective, not scaled</b>
+          <p>We say no more than we say yes. If we're not the right fit, we'll tell you straight.</p>
         </div>
         <div class="approach-card">
-          <b>Senior hands</b>
-          <p>No account layer between you and the people making decisions. You work directly with the team doing the work.</p>
+          <b>No account layer</b>
+          <p>You work with the people actually doing the work. No hand-offs, no juniors learning on your budget.</p>
         </div>
         <div class="approach-card">
-          <b>Numbers first</b>
-          <p>Every recommendation is grounded in spend, margin and channel data — not trend-chasing.</p>
+          <b>Numbers over vibes</b>
+          <p>Every call is backed by spend, margin and channel data — not whatever's trending this week.</p>
         </div>
       </div>
     </div>
@@ -273,11 +374,11 @@
     <div class="wrap">
       <div class="contact-grid">
         <div class="contact-left">
-          <div class="section-num">04 — Get in touch</div>
+          <div class="section-num">05 — Get in touch</div>
           <h2>Tell us about your brand.</h2>
-          <p>Share a few details below and we'll follow up directly. Prefer to skip the form? Email us.</p>
+          <p>A few details, then we follow up directly — no funnel, no auto-reply. Prefer email?</p>
           <a class="direct-email" href="mailto:lynns@prettyseriousbrands.com">lynns@prettyseriousbrands.com</a>
-          <p class="direct-note">Submitting the form opens a pre-filled email to the address above — nothing is stored on our end.</p>
+          <p class="direct-note">Submitting opens a pre-filled email to the address above. Nothing is stored.</p>
         </div>
 
         <form id="onboard-form">
