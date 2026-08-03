@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pretty Serious Brands — Brand, Ecommerce & Growth Partners</title>
+<meta name="description" content="PSB is a small, focused brand development, design and growth agency partnering with ecommerce brands ready to scale.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --white:#ffffff;
+    --line:#e6e4e0;
+    --grey:#6b6b6b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--white);
+    color:var(--black);
+    font-family:'Inter',sans-serif;
+    font-weight:400;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    line-height:1.05;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  section{padding:120px 0;}
+  @media(max-width:768px){
+    section{padding:72px 0;}
+    .wrap{padding:0 22px;}
+  }
+
+  /* NAV */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    max-width:1180px;margin:0 auto;padding:20px 32px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{font-family:'Fraunces',serif;font-weight:700;font-size:20px;letter-spacing:0.02em;}
+  .logo span{font-family:'Inter',sans-serif;font-weight:400;font-size:11px;letter-spacing:0.12em;color:var(--grey);display:block;margin-top:2px;text-transform:uppercase;}
+  .navlinks{display:flex;gap:36px;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;}
+  .navlinks a{opacity:0.72;transition:opacity .2s;}
+  .navlinks a:hover{opacity:1;}
+  .navcta{
+    border:1px solid var(--black);padding:10px 20px;font-size:12px;
+    text-transform:uppercase;letter-spacing:0.08em;transition:background .2s,color .2s;
+  }
+  .navcta:hover{background:var(--black);color:var(--white);}
+  @media(max-width:768px){.navlinks{display:none;}}
+
+  /* HERO */
+  .hero{padding-top:220px;padding-bottom:100px;}
+  .eyebrow{
+    font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--grey);
+    display:flex;align-items:center;gap:12px;margin-bottom:28px;
+  }
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--black);display:inline-block;}
+  .hero h1{
+    font-size:clamp(44px,7vw,92px);
+    max-width:14ch;
+  }
+  .hero h1 em{font-style:italic;font-weight:500;}
+  .hero-sub{
+    margin-top:32px;font-size:19px;max-width:560px;color:#333;font-weight:300;
+  }
+  .hero-row{
+    margin-top:56px;display:flex;gap:64px;flex-wrap:wrap;
+    border-top:1px solid var(--line);padding-top:32px;
+  }
+  .stat b{font-family:'Fraunces',serif;font-size:30px;font-weight:600;display:block;}
+  .stat span{font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:var(--grey);}
+
+  /* SECTION HEADS */
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:64px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:32px;}
+  .section-num{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);margin-bottom:14px;}
+  .section-head h2{font-size:clamp(30px,4vw,46px);max-width:16ch;}
+  .section-head p{max-width:380px;font-size:15px;color:var(--grey);font-weight:300;}
+
+  /* SERVICES */
+  .services{border-top:1px solid var(--line);}
+  .service{
+    display:grid;grid-template-columns:60px 1fr 1fr;gap:32px;
+    padding:40px 0;border-bottom:1px solid var(--line);align-items:start;
+  }
+  .service:first-child{border-top:1px solid var(--line);}
+  .service-index{font-family:'Fraunces',serif;font-size:14px;color:var(--grey);padding-top:4px;}
+  .service h3{font-size:26px;font-weight:600;}
+  .service p{font-size:15px;color:var(--grey);font-weight:300;max-width:46ch;}
+  @media(max-width:768px){
+    .service{grid-template-columns:1fr;gap:10px;}
+  }
+
+  /* FOUNDER */
+  .founder{background:var(--black);color:var(--white);}
+  .founder .section-num,.founder .section-head p{color:#aaa;}
+  .founder .section-head{border-color:#2a2a2a;}
+  .founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+  .founder-quote{font-family:'Fraunces',serif;font-size:clamp(24px,3vw,32px);font-weight:500;font-style:italic;line-height:1.35;}
+  .founder-facts{display:flex;flex-direction:column;gap:28px;}
+  .fact{display:flex;justify-content:space-between;border-bottom:1px solid #2a2a2a;padding-bottom:20px;gap:24px;}
+  .fact b{font-family:'Fraunces',serif;font-size:22px;font-weight:600;white-space:nowrap;}
+  .fact span{font-size:13px;color:#999;text-align:right;max-width:24ch;}
+  @media(max-width:900px){.founder-grid{grid-template-columns:1fr;gap:48px;}}
+
+  /* APPROACH */
+  .approach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .approach-card{background:var(--white);padding:44px 36px;}
+  .approach-card b{display:block;font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin-bottom:14px;}
+  .approach-card p{font-size:14.5px;color:var(--grey);font-weight:300;}
+  @media(max-width:900px){.approach-grid{grid-template-columns:1fr;}}
+
+  /* CONTACT / FORM */
+  .contact{border-top:1px solid var(--line);}
+  .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;}
+  .contact-left h2{font-size:clamp(32px,4.5vw,52px);max-width:12ch;margin-bottom:24px;}
+  .contact-left p{font-size:16px;color:var(--grey);font-weight:300;max-width:40ch;margin-bottom:36px;}
+  .direct-email{
+    font-family:'Fraunces',serif;font-size:22px;font-weight:600;
+    border-bottom:1px solid var(--black);padding-bottom:6px;display:inline-block;
+  }
+  .direct-note{margin-top:20px;font-size:13px;color:var(--grey);}
+
+  form{display:flex;flex-direction:column;gap:22px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--grey);}
+  .field input,.field select,.field textarea{
+    border:none;border-bottom:1px solid var(--line);
+    padding:10px 2px;font-family:'Inter',sans-serif;font-size:15px;background:transparent;
+    color:var(--black);
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--black);}
+  .field textarea{resize:vertical;min-height:70px;}
+  .submit-btn{
+    margin-top:12px;background:var(--black);color:var(--white);border:1px solid var(--black);
+    padding:16px 28px;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;
+    cursor:pointer;transition:background .2s,color .2s;width:fit-content;
+  }
+  .submit-btn:hover{background:var(--white);color:var(--black);}
+  .form-note{font-size:12px;color:var(--grey);margin-top:-6px;}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:56px;}.form-row{grid-template-columns:1fr;}}
+
+  footer{border-top:1px solid var(--line);padding:36px 0;}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer-row span{font-size:12px;color:var(--grey);letter-spacing:0.03em;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">PSB<span>Pretty Serious Brands</span></div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#founder">Founder</a>
+      <a href="#approach">Approach</a>
+    </div>
+    <a class="navcta" href="#contact">Start a conversation</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Brand · Ecommerce · Growth</div>
+      <h1>Serious brands deserve <em>serious</em> partners.</h1>
+      <p class="hero-sub">PSB is a small, focused agency working alongside ecommerce brands on ideation, design and the growth strategy behind it — built for founders who already know their category, and want a partner who moves like an operator.</p>
+      <div class="hero-row">
+        <div class="stat"><b>15+ yrs</b><span>Ecommerce experience</span></div>
+        <div class="stat"><b>$5M+</b><span>Ad spend managed</span></div>
+        <div class="stat"><b>Multi-channel</b><span>Paid, retention, marketplace</span></div>
+        <div class="stat"><b>By design</b><span>Small team, selective roster</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-num">01 — What we do</div>
+          <h2>Four disciplines, one team.</h2>
+        </div>
+        <p>We work end to end when it's warranted, or drop into one discipline when that's what a brand actually needs.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-index">01</div>
+        <h3>Brand Ideation</h3>
+        <p>Positioning, naming, narrative — the thinking that makes a brand defensible before a single asset is designed.</p>
+      </div>
+      <div class="service">
+        <div class="service-index">02</div>
+        <h3>Design</h3>
+        <p>Identity systems, packaging and art direction with a point of view — built to hold up across every channel it touches.</p>
+      </div>
+      <div class="service">
+        <div class="service-index">03</div>
+        <h3>Ecommerce Design &amp; Development</h3>
+        <p>Storefronts and product pages designed to convert, built on the platforms you already run — Shopify and beyond.</p>
+      </div>
+      <div class="service">
+        <div class="service-index">04</div>
+        <h3>Growth Strategy &amp; Digital</h3>
+        <p>Paid media, retention and channel strategy grounded in real spend history, not theory.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder" id="founder">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-num">02 — Who's behind it</div>
+          <h2>Built on operator experience.</h2>
+        </div>
+      </div>
+      <div class="founder-grid">
+        <p class="founder-quote">"I've sat on both sides of the table — running spend and running the brand. PSB exists because most agencies do one or the other. We do both, at a scale small enough to stay honest."</p>
+        <div class="founder-facts">
+          <div class="fact"><b>15+ years</b><span>In ecommerce, across brand, design and performance</span></div>
+          <div class="fact"><b>$5M+</b><span>In tracked ad spend across paid social, search and marketplace</span></div>
+          <div class="fact"><b>Multi-channel</b><span>Paid media, email/SMS, marketplace and retail discipline</span></div>
+          <div class="fact"><b>Small by design</b><span>A focused team, not an account-manager pipeline</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach" id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-num">03 — How we work</div>
+          <h2>Fewer clients, more attention.</h2>
+        </div>
+        <p>We partner with a small number of brands at a time — by choice, not capacity.</p>
+      </div>
+      <div class="approach-grid">
+        <div class="approach-card">
+          <b>Selective roster</b>
+          <p>We take on brands we can meaningfully move, not fill a pipeline. If it's not a fit, we'll say so.</p>
+        </div>
+        <div class="approach-card">
+          <b>Senior hands</b>
+          <p>No account layer between you and the people making decisions. You work directly with the team doing the work.</p>
+        </div>
+        <div class="approach-card">
+          <b>Numbers first</b>
+          <p>Every recommendation is grounded in spend, margin and channel data — not trend-chasing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div class="section-num">04 — Get in touch</div>
+          <h2>Tell us about your brand.</h2>
+          <p>Share a few details below and we'll follow up directly. Prefer to skip the form? Email us.</p>
+          <a class="direct-email" href="mailto:lynns@prettyseriousbrands.com">lynns@prettyseriousbrands.com</a>
+          <p class="direct-note">Submitting the form opens a pre-filled email to the address above — nothing is stored on our end.</p>
+        </div>
+
+        <form id="onboard-form">
+          <div class="form-row">
+            <div class="field">
+              <label for="brand">Brand name</label>
+              <input type="text" id="brand" name="brand" required>
+            </div>
+            <div class="field">
+              <label for="website">Website</label>
+              <input type="url" id="website" name="website" placeholder="https://">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="adspend">Monthly ad spend</label>
+              <select id="adspend" name="adspend" required>
+                <option value="">Select range</option>
+                <option>Under $10K</option>
+                <option>$10K – $50K</option>
+                <option>$50K – $150K</option>
+                <option>$150K – $500K</option>
+                <option>$500K+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="revenue">Monthly revenue</label>
+              <select id="revenue" name="revenue" required>
+                <option value="">Select range</option>
+                <option>Under $50K</option>
+                <option>$50K – $250K</option>
+                <option>$250K – $1M</option>
+                <option>$1M – $5M</option>
+                <option>$5M+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="notes">Anything else we should know?</label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+
+          <button class="submit-btn" type="submit">Send to PSB</button>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Pretty Serious Brands</span>
+    <span>lynns@prettyseriousbrands.com</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.getElementById('onboard-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const f = e.target;
+    const val = (id) => f.querySelector('#' + id).value.trim();
+
+    const subject = 'New brand inquiry: ' + (val('brand') || 'Unnamed brand');
+    const bodyLines = [
+      'Brand name: ' + val('brand'),
+      'Website: ' + val('website'),
+      'Monthly ad spend: ' + val('adspend'),
+      'Monthly revenue: ' + val('revenue'),
+      'Contact name: ' + val('name'),
+      'Contact email: ' + val('email'),
+      'Notes: ' + val('notes')
+    ];
+    const body = bodyLines.join('\n');
+    const mailto = 'mailto:lynns@prettyseriousbrands.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+    document.getElementById('form-note').textContent = 'Opening your email client — send the message to complete your inquiry.';
+  });
+</script>
+
+</body>
+</html>
