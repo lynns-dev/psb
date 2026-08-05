@@ -112,17 +112,27 @@
   /* SERVICES */
   .services{border-top:1px solid var(--line);}
   .service{
-    display:grid;grid-template-columns:90px 1fr 1fr;gap:32px;
-    padding:44px 0;border-bottom:1px solid var(--line);align-items:start;
+    display:grid;grid-template-columns:70px 1fr 220px;gap:40px;
+    padding:52px 0;border-bottom:1px solid var(--line);align-items:start;
     transition:background .25s;
   }
   .service:hover{background:#fafaf8;}
   .service:first-child{border-top:1px solid var(--line);}
   .service-index{font-family:'Bodoni Moda',serif;font-size:15px;color:var(--grey);padding-top:6px;}
-  .service h3{font-size:28px;font-weight:600;text-transform:none;letter-spacing:-0.01em;}
-  .service p{font-size:15px;color:var(--grey);font-weight:300;max-width:46ch;text-transform:none;}
-  @media(max-width:768px){
-    .service{grid-template-columns:1fr;gap:10px;}
+  .service h3{font-size:27px;font-weight:600;text-transform:none;letter-spacing:-0.01em;margin-bottom:12px;}
+  .service-lead{font-size:16px;color:var(--black);font-weight:400;max-width:44ch;text-transform:none;margin-bottom:26px;}
+  .service-process{border-top:1px solid var(--line);padding-top:18px;max-width:56ch;}
+  .service-process-label{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);font-weight:500;margin-bottom:10px;}
+  .service-process p{font-size:14.5px;color:var(--grey);font-weight:300;text-transform:none;}
+  .service-fee{
+    display:flex;flex-direction:column;align-items:flex-end;text-align:right;gap:6px;padding-top:2px;
+  }
+  .service-fee span{font-size:10.5px;text-transform:uppercase;letter-spacing:0.1em;color:var(--grey);font-weight:500;}
+  .service-fee b{font-family:'Bodoni Moda',serif;font-size:26px;font-weight:600;}
+  .service-fee-note{font-size:10.5px;color:var(--grey);}
+  @media(max-width:900px){
+    .service{grid-template-columns:1fr;gap:14px;}
+    .service-fee{align-items:flex-start;text-align:left;flex-direction:row;flex-wrap:wrap;gap:10px;border-top:1px solid var(--line);padding-top:16px;margin-top:6px;}
   }
 
   /* GALLERY / PORTFOLIO — accordion slivers */
@@ -279,30 +289,48 @@
       <div class="section-head">
         <div>
           <div class="section-num">01 — What we do</div>
-          <h2>No fluff. Four disciplines.</h2>
+          <h2>Three services. Direct pricing.</h2>
         </div>
-        <p>Full build, or drop into the one piece you're missing. Your call.</p>
+        <p>No decks, no vague scopes. Here's exactly what we do, how we do it, and what it costs.</p>
       </div>
 
       <div class="service">
         <div class="service-index">01</div>
-        <h3>Brand Ideation</h3>
-        <p>Positioning and narrative that make a brand impossible to copy — before a single pixel gets designed.</p>
+        <div class="service-body">
+          <h3>Brand Ideation + Product Development</h3>
+          <p class="service-lead">Turn an idea into a full design system built to sell.</p>
+          <div class="service-process">
+            <span class="service-process-label">Our process</span>
+            <p>We take your idea and turn it into a full design system. We assess your product and how it fits into an ecommerce ecosystem, then consult on a strategy to develop it — and the products around it — toward high AOV, bundles and upsells.</p>
+          </div>
+        </div>
+        <div class="service-fee"><span>Base fee</span><b>$5,000</b></div>
       </div>
+
       <div class="service">
         <div class="service-index">02</div>
-        <h3>Design</h3>
-        <p>Identity, packaging, art direction with an edge. Built to hold up under scale, not just look good in a pitch.</p>
+        <div class="service-body">
+          <h3>Ecommerce Design + Development</h3>
+          <p class="service-lead">Your brand, built into a store that's ready to sell.</p>
+          <div class="service-process">
+            <span class="service-process-label">Our process</span>
+            <p>We take your existing brand and product and apply it to an online store — payment processing, sales tax, products uploaded, core apps, all hooked up and ready to go to market. Brand design available too, if that piece is still missing.</p>
+          </div>
+        </div>
+        <div class="service-fee"><span>Base fee</span><b>$5,000</b></div>
       </div>
+
       <div class="service">
         <div class="service-index">03</div>
-        <h3>Ecommerce Design &amp; Development</h3>
-        <p>Storefronts built to convert first, look good second — though they'll do both. Shopify and beyond.</p>
-      </div>
-      <div class="service">
-        <div class="service-index">04</div>
-        <h3>Growth Strategy &amp; Digital</h3>
-        <p>Paid, retention and channel strategy pulled from real spend history — not a template deck.</p>
+        <div class="service-body">
+          <h3>Performance Marketing</h3>
+          <p class="service-lead">Meta ads, performance creative, email and SMS — run as one system.</p>
+          <div class="service-process">
+            <span class="service-process-label">Our process</span>
+            <p>We take your existing brand and products and build a full-funnel strategy, first impression to repeat purchase: ad account setup and management, performance creative, landing pages, email and SMS capture, automations, one-off campaigns, and post-purchase upsells. Paid media, creative, email and SMS run as one system — not four separate vendors.</p>
+          </div>
+        </div>
+        <div class="service-fee"><span>Min. $15K/mo spend</span><b>$5,000 + 5%</b><span class="service-fee-note">of ad spend, monthly</span></div>
       </div>
     </div>
   </section>
